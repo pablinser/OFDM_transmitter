@@ -1,1 +1,1 @@
-This work by Pablo Linares-Serrano is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+This work by Jaime Fernández-Palacios Serrano, Santiago de Jesús  González Bonet and Pablo Linares-Serrano is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
