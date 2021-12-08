@@ -1,0 +1,20 @@
+El fichero inputNombres.mat carga en matlab la secuencia de bits que la PPDU inyecta en la entrada
+del cicuito, que se corresponde con la secuencia de nuestros nombres. El primer bit de cada caracter
+ASCII trasmitido corresponde al menos significativo.
+
+El fichero salidasSistema.mat carga en matlab la salida del circuito con las distintas constelaciones.
+El fichero salidasSistema.mat se ha obtenido de los .txt de salida del sistema (separados por parte real 
+e imaginaria).
+
+Los fichero *.txt contienen la salida al ejecutar los test bench. Están formateados de manera que se 
+puede copiar y pegar en matlab de manera sencilla. Los que son secuencias de bits solo habría que poner
+los corchetes de inicio y fin de vector ([]).
+Los que son muestras, tanto en el dominio de la frecuencia como del tiempo (salida del mapper y salida 
+del sistema) están formateados para hacer un vector con una cadena de caracteres en cada componente. Habría que 
+añadir los corchetes de inicio y fin de verctor y emplear el siguiente comando para convertirlo a muestras numéricas:
+
+vector = [ ctrl + V (desde el fichero .txt)];
+vector = cast(typecast(uint16(bin2dec(vector)),'int16'), 'double')/32767;
+
+El resultado de esa operación se puede comparar directamente con las salidas del modelo realizado en matlab.
+los errores obtenidos en cada muestra son del orden de 10 e-4.
